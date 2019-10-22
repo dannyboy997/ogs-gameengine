@@ -1,0 +1,28 @@
+{
+  "name": "ogs-gameengine",
+  "version": "1.0.32",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p .",
+    "bp": "tsc -p . && npm --no-git-tag-version version patch && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannyboy997/ogs-gameengine.git"
+  },
+  "author": "Daniel Hagen <dannyboy997@outlook.com> (http://opengamestudios.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannyboy997/ogs-gameengine/issues"
+  },
+  "homepage": "https://github.com/dannyboy997/ogs-gameengine#readme",
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "three": "^0.109.0"
+  }
+}
