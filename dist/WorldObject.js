@@ -7,10 +7,21 @@ class WorldObject {
         this.material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         this.mesh = new THREE.Mesh(this.geometry, this.material);
     }
+    collitionHappened(worldObject) {
+        this.collisionEvent(worldObject);
+    }
+    checkCollition(worldObject) {
+        return (this.minX <= worldObject.maxX && this.maxX >= worldObject.minX) &&
+            (this.minY <= worldObject.maxY && this.maxY >= worldObject.minY) &&
+            (this.minZ <= worldObject.maxZ && this.maxZ >= worldObject.minZ);
+    }
     update() {
-        this.mesh.rotation.x += 0.01;
-        this.mesh.rotation.y += 0.01;
-        this.mesh.rotation.z += 0.01;
+        this.mesh.position.x = this.positionX;
+        this.mesh.position.y = this.positionY;
+        this.mesh.position.z = this.positionZ;
+        this.mesh.rotation.x += this.rotationX;
+        this.mesh.rotation.y += this.rotationY;
+        this.mesh.rotation.z += this.rotationZ;
     }
 }
 exports.WorldObject = WorldObject;

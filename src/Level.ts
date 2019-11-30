@@ -10,7 +10,7 @@ export class Level {
     constructor() {
     }
 
-    addWorldObject(worldObject:WorldObject):void{
+    public addWorldObject(worldObject:WorldObject): void {
         this.worldObjects.push(worldObject);
 
         this.Scene.add(worldObject.mesh);
